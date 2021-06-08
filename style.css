@@ -19,11 +19,16 @@
 
 body {
   background-color: var(--clr-light-grayish-blue);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .main-div {
   margin: 50px 50px 20px 50px;
-  max-width: 1440px;
+  max-width: 1200px;
   font-size: 13px;
   color: var(--clr-white);
   font-family: "Barlow Semi Condensed";
