@@ -22,7 +22,7 @@ body {
 }
 
 .main-div {
-  margin: 50px;
+  margin: 50px 50px 20px 50px;
   max-width: 1440px;
   font-size: 13px;
   color: var(--clr-white);
@@ -151,7 +151,7 @@ body {
 .attribution {
   font-size: 11px;
   text-align: center;
-  margin: 10px;
+  margin: 0px 0px 10px 0px;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
