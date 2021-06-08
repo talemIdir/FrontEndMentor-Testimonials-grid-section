@@ -1,0 +1,158 @@
+:root {
+  --clr-moderate-violet: hsl(263, 55%, 52%);
+  --clr-very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --clr-very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-light-gray: hsl(0, 0%, 81%);
+  --clr-light-grayish-blue: hsl(210, 46%, 95%);
+
+  --fnt-size: 13px;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--clr-light-grayish-blue);
+}
+
+.main-div {
+  margin: 50px;
+  max-width: 1440px;
+  font-size: 13px;
+  color: var(--clr-white);
+  font-family: "Barlow Semi Condensed";
+  font-weight: 500;
+
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "daniel daniel jonathan kira"
+    "jeanette patrick patrick kira";
+  grid-gap: 20px;
+}
+
+@media only screen and (max-width: 1100px) {
+  .main-div {
+    grid-template-areas:
+      "daniel daniel jonathan jeanette"
+      "patrick patrick kira kira";
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .main-div {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "daniel jonathan"
+      "jeanette patrick"
+      "kira kira";
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .main-div {
+    grid-template-columns: 1fr;
+    grid-template-rows:
+      auto
+      auto
+      auto
+      auto
+      auto;
+    grid-template-areas:
+      "daniel"
+      "jonathan"
+      "jeanette"
+      "patrick"
+      "kira";
+  }
+}
+
+.card {
+  border-radius: 5px;
+  padding: 20px 30px;
+  color: var(--clr-light-grayish-blue);
+  position: relative;
+}
+
+#daniel {
+  background-color: var(--clr-moderate-violet);
+  grid-area: daniel;
+}
+
+#jonathan {
+  background-color: var(--clr-very-dark-grayish-blue);
+  grid-area: jonathan;
+}
+
+#kira {
+  background-color: var(--clr-white);
+  grid-area: kira;
+  color: var(--clr-very-dark-grayish-blue);
+}
+
+#jeanette {
+  background-color: var(--clr-white);
+  grid-area: jeanette;
+  color: var(--clr-very-dark-grayish-blue);
+}
+
+#patrick {
+  background-color: var(--clr-very-dark-blackish-blue);
+  grid-area: patrick;
+}
+
+.header {
+  padding: 10px 0px;
+  display: flex;
+  gap: 10px;
+}
+
+.header img {
+  max-width: 30px;
+  border-radius: 50%;
+  border: solid 2px hsl(263, 47%, 64%);
+}
+
+.job {
+  font-size: 0.8em;
+  opacity: 0.5;
+}
+
+.part-one {
+  position: relative;
+  font-size: 1.5em;
+  font-weight: 600;
+  padding: 10px 0px;
+  z-index: 10;
+}
+
+.part-two {
+  font-weight: 600;
+  padding: 10px 0px;
+  opacity: 0.5;
+  line-height: 1.5;
+}
+
+.card svg {
+  position: absolute;
+  right: 20px;
+  top: 5px;
+  z-index: 1;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin: 10px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
